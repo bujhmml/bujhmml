@@ -27,8 +27,37 @@ jobs:
           outputs: |
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+      - name: Enforce monochrome palette
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          targets = [
+              Path("dist/github-contribution-grid-snake.svg"),
+              Path("dist/github-contribution-grid-snake-dark.svg"),
+          ]
+
+          def to_gray(match: re.Match) -> str:
+              hex_value = match.group(1)
+              if len(hex_value) == 3:
+                  hex_value = "".join(ch * 2 for ch in hex_value)
+              r = int(hex_value[0:2], 16)
+              g = int(hex_value[2:4], 16)
+              b = int(hex_value[4:6], 16)
+              gray = int(0.299 * r + 0.587 * g + 0.114 * b)
+              channel = f"{gray:02x}"
+              return f'"#{channel}{channel}{channel}"'
+
+          for path in targets:
+              if not path.exists():
+                  continue
+              text = path.read_text()
+              text = re.sub(r'"#([0-9a-fA-F]{3,6})"', to_gray, text)
+              path.write_text(text)
+          PY
       - name: Commit snake files
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: EndBug/add-and-commit@v9
         with:
-          commit_message: "chore: update snake graph"
-          file_pattern: dist/github-contribution-grid-snake.svg dist/github-contribution-grid-snake-dark.svg
+          add: "dist/github-contribution-grid-snake.svg dist/github-contribution-grid-snake-dark.svg"
+          message: "chore: update snake graph"

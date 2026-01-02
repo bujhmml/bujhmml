@@ -1,16 +1,16 @@
 <svg width="600" height="200" viewBox="0 0 600 200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">Contribution snake (placeholder)</title>
-  <desc id="desc">Monochrome placeholder until the dark snake workflow runs.</desc>
+  <desc id="desc">Monochrome placeholder until the workflow renders the snake.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="600" y2="200">
       <stop stop-color="#050505"/>
-      <stop offset="1" stop-color="#0A0A0A"/>
+      <stop offset="1" stop-color="#0E0E0E"/>
     </linearGradient>
     <linearGradient id="stroke" x1="0" y1="0" x2="1" y2="0">
-      <stop stop-color="#F5F5F5" stop-opacity="0.7"/>
-      <stop offset="1" stop-color="#B0B0B0" stop-opacity="0.7"/>
+      <stop stop-color="#FFFFFF" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#BFBFBF" stop-opacity="0.6"/>
     </linearGradient>
   </defs>
   <rect width="600" height="200" rx="18" fill="url(#bg)" stroke="url(#stroke)" stroke-width="3"/>
-  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="'SFMono-Regular','Fira Code',monospace" font-size="18" fill="#E5E5E5">awaiting dark snake render</text>
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="'SFMono-Regular','Fira Code',monospace" font-size="18" fill="#E5E5E5">awaiting first snake render</text>
 </svg>
