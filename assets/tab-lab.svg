@@ -1,0 +1,36 @@
+
+<svg width='170' height='46' viewBox='0 0 170 46' fill='none' xmlns='http://www.w3.org/2000/svg' role='img' aria-labelledby='title'>
+  <title>LAB tab</title>
+  <defs>
+    <linearGradient id='bg-lab' x1='0' y1='0' x2='1' y2='1'>
+      <stop stop-color='#000000'/>
+      <stop offset='1' stop-color='#0b0b0b'/>
+    </linearGradient>
+  </defs>
+  <rect x='2' y='2' width='166' height='42' rx='10' fill='url(#bg-lab)' stroke='#FFFFFF' stroke-width='2'/>
+  <g><circle cx='77.13' cy='30.99' r='0.49' fill='#FFFFFF' fill-opacity='0.81' />
+    <circle cx='32.39' cy='39.65' r='1.03' fill='#FFFFFF' fill-opacity='0.54' />
+    <circle cx='84.01' cy='5.99' r='1.09' fill='#FFFFFF' fill-opacity='0.74' />
+    <circle cx='169.19' cy='13.02' r='0.94' fill='#FFFFFF' fill-opacity='0.62' />
+    <circle cx='69.45' cy='6.71' r='0.63' fill='#FFFFFF' fill-opacity='0.52' />
+    <circle cx='105.01' cy='41.74' r='0.70' fill='#FFFFFF' fill-opacity='0.79' />
+    <circle cx='77.89' cy='0.47' r='0.51' fill='#FFFFFF' fill-opacity='0.56' />
+    <circle cx='117.81' cy='31.60' r='0.97' fill='#FFFFFF' fill-opacity='0.81' />
+    <circle cx='125.14' cy='11.79' r='0.48' fill='#FFFFFF' fill-opacity='0.39' />
+    <circle cx='56.59' cy='10.80' r='1.13' fill='#FFFFFF' fill-opacity='1.00' />
+    <circle cx='159.68' cy='44.49' r='0.88' fill='#FFFFFF' fill-opacity='0.84' />
+    <circle cx='7.74' cy='11.67' r='0.90' fill='#FFFFFF' fill-opacity='0.55' />
+    <circle cx='67.10' cy='17.06' r='1.17' fill='#FFFFFF' fill-opacity='0.71' />
+    <circle cx='98.68' cy='11.97' r='0.80' fill='#FFFFFF' fill-opacity='0.95' />
+    <circle cx='149.24' cy='6.07' r='0.65' fill='#FFFFFF' fill-opacity='0.69' />
+    <circle cx='24.11' cy='5.37' r='0.44' fill='#FFFFFF' fill-opacity='0.43' />
+    <circle cx='148.19' cy='38.40' r='1.00' fill='#FFFFFF' fill-opacity='0.95' />
+    <circle cx='48.10' cy='40.34' r='0.89' fill='#FFFFFF' fill-opacity='0.85' />
+    <circle cx='44.84' cy='14.40' r='1.11' fill='#FFFFFF' fill-opacity='0.56' />
+    <circle cx='169.08' cy='35.13' r='0.52' fill='#FFFFFF' fill-opacity='0.90' />
+    <circle cx='111.76' cy='36.72' r='0.44' fill='#FFFFFF' fill-opacity='0.45' />
+    <circle cx='39.08' cy='1.65' r='0.61' fill='#FFFFFF' fill-opacity='0.81' />
+    <circle cx='74.19' cy='45.78' r='1.14' fill='#FFFFFF' fill-opacity='0.38' />
+    <circle cx='60.61' cy='32.62' r='0.79' fill='#FFFFFF' fill-opacity='0.67' /></g>
+  <text x='50%' y='60%' text-anchor='middle' font-family="'SFMono-Regular','Fira Code','Monaco',monospace" font-size='18' letter-spacing='3' fill='#FFFFFF'>LAB</text>
+</svg>

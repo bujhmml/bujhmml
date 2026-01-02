@@ -26,7 +26,8 @@ jobs:
           github_user_name: bujhmml
           outputs: |
             dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+      - name: Duplicate dark variant
+        run: cp dist/github-contribution-grid-snake.svg dist/github-contribution-grid-snake-dark.svg
       - name: Enforce monochrome palette
         run: |
           python - <<'PY'

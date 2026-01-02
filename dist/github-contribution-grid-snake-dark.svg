@@ -1,16 +1,58 @@
-<svg width="600" height="200" viewBox="0 0 600 200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Contribution snake (placeholder)</title>
-  <desc id="desc">Monochrome placeholder until the dark snake workflow runs.</desc>
+
+<svg width='600' height='200' viewBox='0 0 600 200' fill='none' xmlns='http://www.w3.org/2000/svg' role='img'>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="600" y2="200">
-      <stop stop-color="#050505"/>
-      <stop offset="1" stop-color="#0A0A0A"/>
-    </linearGradient>
-    <linearGradient id="stroke" x1="0" y1="0" x2="1" y2="0">
-      <stop stop-color="#F5F5F5" stop-opacity="0.7"/>
-      <stop offset="1" stop-color="#B0B0B0" stop-opacity="0.7"/>
+    <linearGradient id='bg-github-contribution-grid-snake-dark' x1='0' y1='0' x2='1' y2='1'>
+      <stop stop-color='#000000'/>
+      <stop offset='1' stop-color='#0b0b0b'/>
     </linearGradient>
   </defs>
-  <rect width="600" height="200" rx="18" fill="url(#bg)" stroke="url(#stroke)" stroke-width="3"/>
-  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="'SFMono-Regular','Fira Code',monospace" font-size="18" fill="#E5E5E5">awaiting dark snake render</text>
+  <rect width='600' height='200' rx='18' fill='url(#bg-github-contribution-grid-snake-dark)' stroke='#FFFFFF' stroke-width='2'/>
+  <g><circle cx='284.75' cy='29.03' r='1.44' fill='#FFFFFF' fill-opacity='0.36' />
+    <circle cx='556.33' cy='89.76' r='1.21' fill='#FFFFFF' fill-opacity='0.98' />
+    <circle cx='409.73' cy='8.20' r='1.50' fill='#FFFFFF' fill-opacity='0.76' />
+    <circle cx='573.71' cy='86.36' r='1.50' fill='#FFFFFF' fill-opacity='0.91' />
+    <circle cx='200.98' cy='53.42' r='0.52' fill='#FFFFFF' fill-opacity='0.78' />
+    <circle cx='234.69' cy='154.63' r='1.30' fill='#FFFFFF' fill-opacity='0.83' />
+    <circle cx='353.23' cy='38.99' r='0.80' fill='#FFFFFF' fill-opacity='0.80' />
+    <circle cx='107.95' cy='109.52' r='1.21' fill='#FFFFFF' fill-opacity='0.89' />
+    <circle cx='7.18' cy='19.54' r='0.52' fill='#FFFFFF' fill-opacity='0.64' />
+    <circle cx='131.65' cy='56.66' r='0.63' fill='#FFFFFF' fill-opacity='0.37' />
+    <circle cx='55.16' cy='187.70' r='1.19' fill='#FFFFFF' fill-opacity='0.89' />
+    <circle cx='570.29' cy='127.62' r='1.25' fill='#FFFFFF' fill-opacity='0.43' />
+    <circle cx='513.86' cy='25.98' r='1.19' fill='#FFFFFF' fill-opacity='0.93' />
+    <circle cx='339.64' cy='193.43' r='1.48' fill='#FFFFFF' fill-opacity='0.80' />
+    <circle cx='152.00' cy='93.39' r='1.52' fill='#FFFFFF' fill-opacity='0.77' />
+    <circle cx='553.62' cy='55.28' r='0.91' fill='#FFFFFF' fill-opacity='0.94' />
+    <circle cx='461.93' cy='64.68' r='0.59' fill='#FFFFFF' fill-opacity='0.40' />
+    <circle cx='466.26' cy='76.56' r='0.80' fill='#FFFFFF' fill-opacity='0.39' />
+    <circle cx='573.36' cy='52.93' r='0.93' fill='#FFFFFF' fill-opacity='0.67' />
+    <circle cx='557.15' cy='122.06' r='0.61' fill='#FFFFFF' fill-opacity='0.67' />
+    <circle cx='86.32' cy='153.74' r='0.66' fill='#FFFFFF' fill-opacity='0.77' />
+    <circle cx='547.57' cy='143.08' r='0.52' fill='#FFFFFF' fill-opacity='0.40' />
+    <circle cx='342.81' cy='50.12' r='0.94' fill='#FFFFFF' fill-opacity='0.93' />
+    <circle cx='89.31' cy='128.07' r='1.52' fill='#FFFFFF' fill-opacity='0.78' />
+    <circle cx='159.86' cy='140.01' r='1.49' fill='#FFFFFF' fill-opacity='0.72' />
+    <circle cx='309.23' cy='187.98' r='0.99' fill='#FFFFFF' fill-opacity='0.63' />
+    <circle cx='506.43' cy='156.19' r='1.34' fill='#FFFFFF' fill-opacity='0.70' />
+    <circle cx='1.98' cy='190.83' r='1.38' fill='#FFFFFF' fill-opacity='0.66' />
+    <circle cx='340.35' cy='187.01' r='0.83' fill='#FFFFFF' fill-opacity='0.79' />
+    <circle cx='240.37' cy='126.45' r='1.55' fill='#FFFFFF' fill-opacity='0.41' />
+    <circle cx='320.78' cy='192.19' r='0.50' fill='#FFFFFF' fill-opacity='0.65' />
+    <circle cx='459.90' cy='129.56' r='0.61' fill='#FFFFFF' fill-opacity='0.38' />
+    <circle cx='230.50' cy='38.20' r='1.24' fill='#FFFFFF' fill-opacity='0.93' />
+    <circle cx='378.37' cy='71.85' r='0.50' fill='#FFFFFF' fill-opacity='0.76' />
+    <circle cx='441.19' cy='27.99' r='0.63' fill='#FFFFFF' fill-opacity='0.82' />
+    <circle cx='355.77' cy='97.85' r='0.48' fill='#FFFFFF' fill-opacity='0.70' />
+    <circle cx='184.64' cy='106.79' r='1.40' fill='#FFFFFF' fill-opacity='0.64' />
+    <circle cx='597.50' cy='7.41' r='0.47' fill='#FFFFFF' fill-opacity='0.86' />
+    <circle cx='25.69' cy='23.64' r='1.37' fill='#FFFFFF' fill-opacity='0.78' />
+    <circle cx='275.02' cy='135.62' r='1.45' fill='#FFFFFF' fill-opacity='0.45' />
+    <circle cx='347.61' cy='184.96' r='0.44' fill='#FFFFFF' fill-opacity='0.44' />
+    <circle cx='392.30' cy='94.24' r='1.50' fill='#FFFFFF' fill-opacity='0.38' />
+    <circle cx='420.78' cy='26.11' r='0.61' fill='#FFFFFF' fill-opacity='0.38' />
+    <circle cx='184.40' cy='158.74' r='0.95' fill='#FFFFFF' fill-opacity='0.46' />
+    <circle cx='354.63' cy='163.56' r='0.53' fill='#FFFFFF' fill-opacity='0.67' />
+    <circle cx='479.51' cy='44.11' r='1.37' fill='#FFFFFF' fill-opacity='0.63' />
+    <circle cx='486.91' cy='196.44' r='1.21' fill='#FFFFFF' fill-opacity='0.56' />
+    <circle cx='585.51' cy='115.19' r='0.56' fill='#FFFFFF' fill-opacity='0.89' /></g>
 </svg>

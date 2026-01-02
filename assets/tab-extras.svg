@@ -1,0 +1,36 @@
+
+<svg width='170' height='46' viewBox='0 0 170 46' fill='none' xmlns='http://www.w3.org/2000/svg' role='img' aria-labelledby='title'>
+  <title>EXTRAS tab</title>
+  <defs>
+    <linearGradient id='bg-extras' x1='0' y1='0' x2='1' y2='1'>
+      <stop stop-color='#000000'/>
+      <stop offset='1' stop-color='#0b0b0b'/>
+    </linearGradient>
+  </defs>
+  <rect x='2' y='2' width='166' height='42' rx='10' fill='url(#bg-extras)' stroke='#FFFFFF' stroke-width='2'/>
+  <g><circle cx='159.94' cy='31.77' r='1.03' fill='#FFFFFF' fill-opacity='0.51' />
+    <circle cx='93.96' cy='14.23' r='1.17' fill='#FFFFFF' fill-opacity='0.59' />
+    <circle cx='138.08' cy='5.61' r='1.09' fill='#FFFFFF' fill-opacity='0.91' />
+    <circle cx='66.04' cy='41.85' r='0.71' fill='#FFFFFF' fill-opacity='0.99' />
+    <circle cx='43.44' cy='4.15' r='1.06' fill='#FFFFFF' fill-opacity='0.50' />
+    <circle cx='35.77' cy='40.95' r='1.13' fill='#FFFFFF' fill-opacity='0.76' />
+    <circle cx='149.51' cy='35.27' r='0.73' fill='#FFFFFF' fill-opacity='0.37' />
+    <circle cx='147.30' cy='37.87' r='1.15' fill='#FFFFFF' fill-opacity='0.66' />
+    <circle cx='70.20' cy='38.69' r='0.97' fill='#FFFFFF' fill-opacity='0.92' />
+    <circle cx='139.44' cy='37.92' r='0.96' fill='#FFFFFF' fill-opacity='0.68' />
+    <circle cx='59.82' cy='27.70' r='1.05' fill='#FFFFFF' fill-opacity='0.83' />
+    <circle cx='77.05' cy='1.26' r='0.44' fill='#FFFFFF' fill-opacity='0.77' />
+    <circle cx='107.13' cy='36.39' r='0.51' fill='#FFFFFF' fill-opacity='0.61' />
+    <circle cx='106.81' cy='14.43' r='0.47' fill='#FFFFFF' fill-opacity='0.45' />
+    <circle cx='87.78' cy='44.60' r='1.06' fill='#FFFFFF' fill-opacity='0.85' />
+    <circle cx='143.98' cy='31.54' r='1.03' fill='#FFFFFF' fill-opacity='0.56' />
+    <circle cx='81.32' cy='33.82' r='0.61' fill='#FFFFFF' fill-opacity='0.80' />
+    <circle cx='140.55' cy='36.78' r='0.56' fill='#FFFFFF' fill-opacity='0.62' />
+    <circle cx='30.92' cy='40.31' r='1.16' fill='#FFFFFF' fill-opacity='0.92' />
+    <circle cx='38.16' cy='43.61' r='1.14' fill='#FFFFFF' fill-opacity='0.77' />
+    <circle cx='106.53' cy='41.71' r='1.18' fill='#FFFFFF' fill-opacity='0.48' />
+    <circle cx='119.21' cy='7.76' r='0.72' fill='#FFFFFF' fill-opacity='0.63' />
+    <circle cx='44.23' cy='4.10' r='0.69' fill='#FFFFFF' fill-opacity='0.97' />
+    <circle cx='19.95' cy='33.05' r='0.75' fill='#FFFFFF' fill-opacity='0.95' /></g>
+  <text x='50%' y='60%' text-anchor='middle' font-family="'SFMono-Regular','Fira Code','Monaco',monospace" font-size='18' letter-spacing='3' fill='#FFFFFF'>EXTRAS</text>
+</svg>

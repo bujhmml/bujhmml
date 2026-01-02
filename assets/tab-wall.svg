@@ -1,0 +1,36 @@
+
+<svg width='170' height='46' viewBox='0 0 170 46' fill='none' xmlns='http://www.w3.org/2000/svg' role='img' aria-labelledby='title'>
+  <title>WALL tab</title>
+  <defs>
+    <linearGradient id='bg-wall' x1='0' y1='0' x2='1' y2='1'>
+      <stop stop-color='#000000'/>
+      <stop offset='1' stop-color='#0b0b0b'/>
+    </linearGradient>
+  </defs>
+  <rect x='2' y='2' width='166' height='42' rx='10' fill='url(#bg-wall)' stroke='#FFFFFF' stroke-width='2'/>
+  <g><circle cx='82.43' cy='15.65' r='1.13' fill='#FFFFFF' fill-opacity='0.42' />
+    <circle cx='26.27' cy='10.17' r='0.55' fill='#FFFFFF' fill-opacity='0.93' />
+    <circle cx='104.28' cy='38.25' r='0.82' fill='#FFFFFF' fill-opacity='0.70' />
+    <circle cx='93.69' cy='34.79' r='0.49' fill='#FFFFFF' fill-opacity='0.65' />
+    <circle cx='12.99' cy='37.67' r='1.14' fill='#FFFFFF' fill-opacity='0.66' />
+    <circle cx='52.97' cy='16.68' r='1.05' fill='#FFFFFF' fill-opacity='0.93' />
+    <circle cx='101.60' cy='35.13' r='0.67' fill='#FFFFFF' fill-opacity='0.81' />
+    <circle cx='4.89' cy='37.47' r='0.58' fill='#FFFFFF' fill-opacity='0.91' />
+    <circle cx='24.20' cy='10.42' r='0.50' fill='#FFFFFF' fill-opacity='0.43' />
+    <circle cx='13.36' cy='31.78' r='1.03' fill='#FFFFFF' fill-opacity='0.40' />
+    <circle cx='131.70' cy='34.84' r='0.43' fill='#FFFFFF' fill-opacity='0.42' />
+    <circle cx='134.82' cy='23.62' r='0.45' fill='#FFFFFF' fill-opacity='0.43' />
+    <circle cx='43.01' cy='3.05' r='0.93' fill='#FFFFFF' fill-opacity='0.84' />
+    <circle cx='133.00' cy='42.32' r='0.56' fill='#FFFFFF' fill-opacity='0.94' />
+    <circle cx='31.41' cy='16.17' r='0.47' fill='#FFFFFF' fill-opacity='0.90' />
+    <circle cx='160.11' cy='43.64' r='0.68' fill='#FFFFFF' fill-opacity='0.45' />
+    <circle cx='85.11' cy='33.51' r='0.59' fill='#FFFFFF' fill-opacity='0.72' />
+    <circle cx='16.85' cy='26.59' r='0.41' fill='#FFFFFF' fill-opacity='0.49' />
+    <circle cx='32.56' cy='12.97' r='1.12' fill='#FFFFFF' fill-opacity='0.70' />
+    <circle cx='165.51' cy='4.54' r='0.57' fill='#FFFFFF' fill-opacity='0.68' />
+    <circle cx='120.32' cy='16.86' r='0.87' fill='#FFFFFF' fill-opacity='0.64' />
+    <circle cx='162.82' cy='8.32' r='0.68' fill='#FFFFFF' fill-opacity='0.60' />
+    <circle cx='36.43' cy='10.47' r='0.49' fill='#FFFFFF' fill-opacity='0.99' />
+    <circle cx='21.01' cy='5.07' r='0.51' fill='#FFFFFF' fill-opacity='0.85' /></g>
+  <text x='50%' y='60%' text-anchor='middle' font-family="'SFMono-Regular','Fira Code','Monaco',monospace" font-size='18' letter-spacing='3' fill='#FFFFFF'>WALL</text>
+</svg>

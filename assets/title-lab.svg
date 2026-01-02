@@ -1,19 +1,132 @@
-<svg width="720" height="140" viewBox="0 0 720 140" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
-  <title id="title">Lab Constellation</title>
+
+<svg width='720' height='140' viewBox='0 0 720 140' fill='none' xmlns='http://www.w3.org/2000/svg' role='img' aria-labelledby='title'>
+  <title>Lab Constellation</title>
   <defs>
-    <linearGradient id="panel" x1="0" y1="0" x2="720" y2="0">
-      <stop stop-color="#0A0A0A"/>
-      <stop offset="1" stop-color="#0F0F0F"/>
+    <linearGradient id='panel-lab' x1='0' y1='0' x2='1' y2='1'>
+      <stop offset='0%' stop-color='#050505'/>
+      <stop offset='100%' stop-color='#0b0b0b'/>
     </linearGradient>
-    <linearGradient id="stroke" x1="0" y1="0" x2="720" y2="0">
-      <stop stop-color="#F5F5F5" stop-opacity="0.7"/>
-      <stop offset="1" stop-color="#BFBFBF" stop-opacity="0.7"/>
-    </linearGradient>
-    <filter id="soft" x="-20" y="-20" width="760" height="180" color-interpolation-filters="sRGB">
-      <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#FFFFFF" flood-opacity="0.22"/>
-    </filter>
   </defs>
-  <rect x="6" y="6" width="708" height="128" rx="22" fill="url(#panel)" stroke="url(#stroke)" stroke-width="2" filter="url(#soft)"/>
-  <text x="50%" y="52%" text-anchor="middle" font-family="'SFMono-Regular','Fira Code','Monaco',monospace" font-size="44" letter-spacing="6" fill="#F8F8F8">LAB CONSTELLATION</text>
-  <text x="50%" y="77%" text-anchor="middle" font-family="'Inter','Segoe UI',sans-serif" font-size="18" fill="#C9C9C9">Experiments &amp; tooling</text>
+  <rect x='8' y='8' width='704' height='124' rx='22' fill='url(#panel-lab)' stroke='#FFFFFF' stroke-width='2'/>
+  <g><circle cx='131.67' cy='56.11' r='1.55' fill='#FFFFFF' fill-opacity='0.53' />
+    <circle cx='277.72' cy='119.09' r='1.36' fill='#FFFFFF' fill-opacity='0.77' />
+    <circle cx='573.77' cy='15.83' r='1.24' fill='#FFFFFF' fill-opacity='0.39' />
+    <circle cx='678.58' cy='22.32' r='0.90' fill='#FFFFFF' fill-opacity='0.73' />
+    <circle cx='577.63' cy='94.98' r='0.62' fill='#FFFFFF' fill-opacity='0.60' />
+    <circle cx='258.19' cy='4.03' r='1.22' fill='#FFFFFF' fill-opacity='0.90' />
+    <circle cx='700.88' cy='18.29' r='1.50' fill='#FFFFFF' fill-opacity='0.42' />
+    <circle cx='296.12' cy='6.44' r='0.71' fill='#FFFFFF' fill-opacity='0.55' />
+    <circle cx='507.29' cy='94.91' r='1.32' fill='#FFFFFF' fill-opacity='0.72' />
+    <circle cx='406.81' cy='136.91' r='1.20' fill='#FFFFFF' fill-opacity='0.57' />
+    <circle cx='376.63' cy='98.08' r='0.51' fill='#FFFFFF' fill-opacity='0.78' />
+    <circle cx='178.98' cy='48.40' r='1.21' fill='#FFFFFF' fill-opacity='0.60' />
+    <circle cx='604.10' cy='78.17' r='1.59' fill='#FFFFFF' fill-opacity='0.39' />
+    <circle cx='463.25' cy='21.97' r='1.42' fill='#FFFFFF' fill-opacity='0.90' />
+    <circle cx='625.98' cy='10.48' r='0.99' fill='#FFFFFF' fill-opacity='0.51' />
+    <circle cx='698.50' cy='7.05' r='0.67' fill='#FFFFFF' fill-opacity='0.77' />
+    <circle cx='290.36' cy='32.90' r='0.95' fill='#FFFFFF' fill-opacity='0.87' />
+    <circle cx='322.63' cy='119.92' r='0.94' fill='#FFFFFF' fill-opacity='0.43' />
+    <circle cx='358.11' cy='91.47' r='0.52' fill='#FFFFFF' fill-opacity='0.62' />
+    <circle cx='401.13' cy='0.02' r='0.51' fill='#FFFFFF' fill-opacity='0.74' />
+    <circle cx='445.73' cy='42.64' r='1.01' fill='#FFFFFF' fill-opacity='0.48' />
+    <circle cx='483.46' cy='133.05' r='0.84' fill='#FFFFFF' fill-opacity='0.39' />
+    <circle cx='160.50' cy='63.62' r='1.07' fill='#FFFFFF' fill-opacity='0.75' />
+    <circle cx='340.66' cy='92.00' r='1.26' fill='#FFFFFF' fill-opacity='0.42' />
+    <circle cx='546.71' cy='31.04' r='0.81' fill='#FFFFFF' fill-opacity='0.89' />
+    <circle cx='694.39' cy='40.88' r='1.03' fill='#FFFFFF' fill-opacity='0.81' />
+    <circle cx='32.96' cy='22.98' r='0.57' fill='#FFFFFF' fill-opacity='0.82' />
+    <circle cx='519.52' cy='14.97' r='1.13' fill='#FFFFFF' fill-opacity='0.47' />
+    <circle cx='669.76' cy='55.01' r='0.95' fill='#FFFFFF' fill-opacity='0.86' />
+    <circle cx='516.09' cy='15.09' r='0.90' fill='#FFFFFF' fill-opacity='0.95' />
+    <circle cx='602.98' cy='82.43' r='1.33' fill='#FFFFFF' fill-opacity='0.64' />
+    <circle cx='474.09' cy='133.87' r='0.56' fill='#FFFFFF' fill-opacity='0.67' />
+    <circle cx='381.86' cy='6.80' r='1.52' fill='#FFFFFF' fill-opacity='0.90' />
+    <circle cx='347.71' cy='71.17' r='1.51' fill='#FFFFFF' fill-opacity='0.47' />
+    <circle cx='416.56' cy='102.27' r='0.55' fill='#FFFFFF' fill-opacity='0.60' />
+    <circle cx='432.39' cy='123.58' r='1.00' fill='#FFFFFF' fill-opacity='0.60' />
+    <circle cx='705.24' cy='128.23' r='1.31' fill='#FFFFFF' fill-opacity='0.53' />
+    <circle cx='693.79' cy='135.87' r='0.94' fill='#FFFFFF' fill-opacity='0.44' />
+    <circle cx='297.18' cy='98.00' r='1.30' fill='#FFFFFF' fill-opacity='0.54' />
+    <circle cx='505.08' cy='120.50' r='1.25' fill='#FFFFFF' fill-opacity='0.96' />
+    <circle cx='455.46' cy='28.12' r='1.15' fill='#FFFFFF' fill-opacity='0.54' />
+    <circle cx='248.61' cy='94.13' r='1.58' fill='#FFFFFF' fill-opacity='0.77' />
+    <circle cx='690.00' cy='70.55' r='1.23' fill='#FFFFFF' fill-opacity='0.56' />
+    <circle cx='83.09' cy='49.31' r='0.98' fill='#FFFFFF' fill-opacity='0.72' />
+    <circle cx='480.35' cy='58.45' r='1.30' fill='#FFFFFF' fill-opacity='0.90' />
+    <circle cx='205.87' cy='118.62' r='1.37' fill='#FFFFFF' fill-opacity='0.69' />
+    <circle cx='18.20' cy='20.35' r='1.20' fill='#FFFFFF' fill-opacity='0.48' />
+    <circle cx='540.13' cy='22.53' r='0.74' fill='#FFFFFF' fill-opacity='0.51' />
+    <circle cx='604.35' cy='96.68' r='0.75' fill='#FFFFFF' fill-opacity='0.84' />
+    <circle cx='23.26' cy='113.96' r='0.52' fill='#FFFFFF' fill-opacity='0.91' />
+    <circle cx='532.43' cy='121.08' r='1.29' fill='#FFFFFF' fill-opacity='0.71' />
+    <circle cx='171.07' cy='109.80' r='1.36' fill='#FFFFFF' fill-opacity='0.54' />
+    <circle cx='478.44' cy='129.71' r='0.87' fill='#FFFFFF' fill-opacity='0.97' />
+    <circle cx='702.59' cy='43.77' r='1.06' fill='#FFFFFF' fill-opacity='0.36' />
+    <circle cx='180.97' cy='86.88' r='1.34' fill='#FFFFFF' fill-opacity='0.92' />
+    <circle cx='597.59' cy='127.61' r='1.25' fill='#FFFFFF' fill-opacity='0.77' />
+    <circle cx='543.68' cy='76.53' r='1.12' fill='#FFFFFF' fill-opacity='0.85' />
+    <circle cx='694.29' cy='41.18' r='0.61' fill='#FFFFFF' fill-opacity='0.79' />
+    <circle cx='134.62' cy='24.33' r='1.02' fill='#FFFFFF' fill-opacity='0.60' />
+    <circle cx='308.53' cy='77.92' r='0.56' fill='#FFFFFF' fill-opacity='0.73' />
+    <circle cx='183.61' cy='46.28' r='1.25' fill='#FFFFFF' fill-opacity='0.45' />
+    <circle cx='110.67' cy='45.17' r='0.46' fill='#FFFFFF' fill-opacity='0.96' />
+    <circle cx='443.24' cy='92.66' r='0.99' fill='#FFFFFF' fill-opacity='0.72' />
+    <circle cx='257.82' cy='109.76' r='0.78' fill='#FFFFFF' fill-opacity='0.49' />
+    <circle cx='132.39' cy='9.54' r='1.01' fill='#FFFFFF' fill-opacity='0.62' />
+    <circle cx='386.67' cy='12.87' r='0.67' fill='#FFFFFF' fill-opacity='0.49' />
+    <circle cx='238.96' cy='50.51' r='0.66' fill='#FFFFFF' fill-opacity='0.84' />
+    <circle cx='381.96' cy='139.53' r='1.39' fill='#FFFFFF' fill-opacity='0.99' />
+    <circle cx='6.34' cy='93.65' r='0.93' fill='#FFFFFF' fill-opacity='0.94' />
+    <circle cx='441.86' cy='86.96' r='1.55' fill='#FFFFFF' fill-opacity='0.79' />
+    <circle cx='231.07' cy='128.23' r='1.53' fill='#FFFFFF' fill-opacity='0.60' />
+    <circle cx='388.97' cy='39.60' r='1.49' fill='#FFFFFF' fill-opacity='0.88' />
+    <circle cx='269.97' cy='112.39' r='0.93' fill='#FFFFFF' fill-opacity='0.38' />
+    <circle cx='646.76' cy='26.95' r='1.02' fill='#FFFFFF' fill-opacity='0.97' />
+    <circle cx='120.52' cy='133.88' r='1.05' fill='#FFFFFF' fill-opacity='0.35' />
+    <circle cx='47.14' cy='93.85' r='1.33' fill='#FFFFFF' fill-opacity='0.91' />
+    <circle cx='305.43' cy='14.55' r='1.05' fill='#FFFFFF' fill-opacity='0.81' />
+    <circle cx='702.88' cy='108.53' r='1.18' fill='#FFFFFF' fill-opacity='0.96' />
+    <circle cx='537.76' cy='21.53' r='0.95' fill='#FFFFFF' fill-opacity='0.57' />
+    <circle cx='63.02' cy='7.60' r='1.35' fill='#FFFFFF' fill-opacity='0.71' />
+    <circle cx='413.97' cy='31.87' r='0.71' fill='#FFFFFF' fill-opacity='0.60' />
+    <circle cx='453.76' cy='60.62' r='0.42' fill='#FFFFFF' fill-opacity='0.79' />
+    <circle cx='385.08' cy='89.80' r='1.14' fill='#FFFFFF' fill-opacity='0.84' />
+    <circle cx='421.64' cy='98.12' r='0.49' fill='#FFFFFF' fill-opacity='0.95' />
+    <circle cx='76.42' cy='110.16' r='0.76' fill='#FFFFFF' fill-opacity='0.41' />
+    <circle cx='551.00' cy='61.27' r='0.87' fill='#FFFFFF' fill-opacity='0.78' />
+    <circle cx='341.27' cy='74.69' r='0.56' fill='#FFFFFF' fill-opacity='0.60' />
+    <circle cx='574.19' cy='76.40' r='1.55' fill='#FFFFFF' fill-opacity='0.44' />
+    <circle cx='487.65' cy='127.98' r='1.35' fill='#FFFFFF' fill-opacity='0.82' />
+    <circle cx='268.65' cy='132.93' r='1.06' fill='#FFFFFF' fill-opacity='0.71' />
+    <circle cx='88.73' cy='0.70' r='1.12' fill='#FFFFFF' fill-opacity='0.70' />
+    <circle cx='681.83' cy='42.66' r='1.30' fill='#FFFFFF' fill-opacity='0.94' />
+    <circle cx='247.57' cy='57.77' r='1.18' fill='#FFFFFF' fill-opacity='0.68' />
+    <circle cx='115.89' cy='30.91' r='1.40' fill='#FFFFFF' fill-opacity='0.48' />
+    <circle cx='130.58' cy='111.95' r='1.42' fill='#FFFFFF' fill-opacity='0.90' />
+    <circle cx='671.31' cy='139.20' r='0.95' fill='#FFFFFF' fill-opacity='0.71' />
+    <circle cx='209.27' cy='9.43' r='0.52' fill='#FFFFFF' fill-opacity='0.82' />
+    <circle cx='350.78' cy='46.32' r='0.55' fill='#FFFFFF' fill-opacity='0.78' />
+    <circle cx='72.03' cy='86.73' r='1.48' fill='#FFFFFF' fill-opacity='0.56' />
+    <circle cx='324.47' cy='86.29' r='0.77' fill='#FFFFFF' fill-opacity='0.73' />
+    <circle cx='407.20' cy='51.03' r='0.78' fill='#FFFFFF' fill-opacity='0.63' />
+    <circle cx='3.48' cy='34.46' r='0.67' fill='#FFFFFF' fill-opacity='0.83' />
+    <circle cx='314.01' cy='117.62' r='0.56' fill='#FFFFFF' fill-opacity='0.83' />
+    <circle cx='632.08' cy='64.80' r='0.83' fill='#FFFFFF' fill-opacity='0.55' />
+    <circle cx='397.20' cy='24.61' r='1.13' fill='#FFFFFF' fill-opacity='0.90' />
+    <circle cx='618.27' cy='19.60' r='1.05' fill='#FFFFFF' fill-opacity='0.52' />
+    <circle cx='638.16' cy='10.70' r='0.49' fill='#FFFFFF' fill-opacity='0.36' />
+    <circle cx='365.17' cy='4.37' r='1.10' fill='#FFFFFF' fill-opacity='0.61' />
+    <circle cx='424.83' cy='126.88' r='1.06' fill='#FFFFFF' fill-opacity='0.70' />
+    <circle cx='719.08' cy='66.09' r='1.33' fill='#FFFFFF' fill-opacity='0.59' />
+    <circle cx='160.78' cy='108.10' r='1.28' fill='#FFFFFF' fill-opacity='0.54' />
+    <circle cx='334.58' cy='71.46' r='0.88' fill='#FFFFFF' fill-opacity='0.68' />
+    <circle cx='477.13' cy='118.72' r='1.37' fill='#FFFFFF' fill-opacity='0.75' />
+    <circle cx='119.41' cy='71.98' r='0.94' fill='#FFFFFF' fill-opacity='0.47' />
+    <circle cx='683.07' cy='92.32' r='1.56' fill='#FFFFFF' fill-opacity='0.83' />
+    <circle cx='348.12' cy='50.23' r='0.66' fill='#FFFFFF' fill-opacity='0.67' />
+    <circle cx='45.26' cy='51.72' r='0.45' fill='#FFFFFF' fill-opacity='0.48' />
+    <circle cx='653.56' cy='50.58' r='0.96' fill='#FFFFFF' fill-opacity='0.65' />
+    <circle cx='33.43' cy='137.28' r='0.79' fill='#FFFFFF' fill-opacity='0.81' />
+    <circle cx='375.39' cy='116.15' r='1.40' fill='#FFFFFF' fill-opacity='0.52' /></g>
+  <text x='50%' y='58%' text-anchor='middle' font-family="'SFMono-Regular','Fira Code','Monaco',monospace" font-size='44' letter-spacing='8' fill='#FFFFFF'>LAB CONSTELLATION</text>
 </svg>
