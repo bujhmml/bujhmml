@@ -19,7 +19,7 @@
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=2200&pause=650&center=true&vCenter=true&width=900&lines=Full-Stack+Engineer+%7C+Automation+%26+Data+Engineering;Python+%7C+Node.js%2FTypeScript+%7C+Next.js+%7C+FastAPI;Docker+%7C+Nginx+%7C+CI%2FCD+%7C+Production-Ready+Systems;Scraping+at+scale+%7C+ETL+pipelines+%7C+AI+integrations" alt="Typing" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=2200&pause=650&center=true&vCenter=true&width=920&lines=Full-Stack+Engineer+%7C+Automation+%26+Data+Engineering;Python+%7C+Node.js%2FTypeScript+%7C+Next.js+%7C+FastAPI;Docker+%7C+Nginx+%7C+CI%2FCD+%7C+Production-Ready+Systems;Scraping+at+scale+%7C+ETL+pipelines+%7C+AI+integrations" alt="Typing" />
 </p>
 
 ---
@@ -31,7 +31,7 @@ I build **production-ready web systems** and **automation pipelines** end-to-end
 - **Full-Stack:** Python (FastAPI/Django/Flask), Node.js/TypeScript (Express), Next.js/React
 - **DevOps / Production:** Docker/Compose, Nginx reverse-proxy, GitHub Actions CI/CD, Linux
 - **Data / Automation:** scraping with proxy rotation & anti-bot handling, ETL pipelines, normalization, monitoring
-- **Low-level & Security mindset:** C/C++ basics, reverse engineering fundamentals, debugging, performance & failure analysis
+- **Low-level & security mindset:** C/C++ basics, reverse engineering fundamentals, debugging, performance & failure analysis
 
 **Engineering focus**
 - Clean APIs, predictable configs (env-based), and safe deploys
@@ -65,7 +65,7 @@ I build **production-ready web systems** and **automation pipelines** end-to-end
 ---
 
 ## ✅ What I deliver
-- **APIs & backends:** auth, billing-ready patterns, integrations, migrations, background jobs
+- **APIs & backends:** auth, integration patterns, migrations, background jobs, reliable configs
 - **Web apps:** SEO-friendly Next.js, admin panels, dashboards, i18n-ready UI
 - **Automation:** scrapers, bots, scheduled workers, data pipelines, monitoring & alerts
 - **Production:** containerized deploys, reverse-proxy, secure configs, stable environments
@@ -90,17 +90,11 @@ I build **production-ready web systems** and **automation pipelines** end-to-end
 
 ## 🔗 Links
 <p align="left">
-  <a href="https://t.me/YOUR_TELEGRAM">
-    <img src="https://img.shields.io/badge/Telegram-@YOUR_TELEGRAM-2CA5E0?logo=telegram&logoColor=white&style=for-the-badge" alt="Telegram" />
+  <a href="https://t.me/bujhmml">
+    <img src="https://img.shields.io/badge/Telegram-@bujhmml-2CA5E0?logo=telegram&logoColor=white&style=for-the-badge" alt="Telegram" />
   </a>
-  <a href="mailto:YOUR_EMAIL">
-    <img src="https://img.shields.io/badge/Email-YOUR_EMAIL-EA4335?logo=gmail&logoColor=white&style=for-the-badge" alt="Email" />
-  </a>
-  <a href="https://www.linkedin.com/in/YOUR_LINKEDIN">
-    <img src="https://img.shields.io/badge/LinkedIn-YOUR_LINKEDIN-0A66C2?logo=linkedin&logoColor=white&style=for-the-badge" alt="LinkedIn" />
-  </a>
-  <a href="YOUR_PORTFOLIO">
-    <img src="https://img.shields.io/badge/Portfolio-Website-111?logo=vercel&logoColor=white&style=for-the-badge" alt="Portfolio" />
+  <a href="mailto:igorbelevskiy12@gmail.com">
+    <img src="https://img.shields.io/badge/Email-igorbelevskiy12%40gmail.com-EA4335?logo=gmail&logoColor=white&style=for-the-badge" alt="Email" />
   </a>
   <a href="https://www.codewars.com/users/bujhmml">
     <img src="https://img.shields.io/badge/Codewars-bujhmml-B1361E?style=for-the-badge&logo=codewars&logoColor=white" alt="Codewars" />
