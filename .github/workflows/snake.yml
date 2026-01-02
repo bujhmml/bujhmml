@@ -57,8 +57,24 @@ jobs:
               text = re.sub(r'"#([0-9a-fA-F]{3,6})"', to_gray, text)
               path.write_text(text)
           PY
-      - name: Commit snake files
-        uses: EndBug/add-and-commit@v9
-        with:
-          add: "dist/github-contribution-grid-snake.svg dist/github-contribution-grid-snake-dark.svg"
-          message: "chore: update snake graph"
+      - name: Configure git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+      - name: Commit and push if changed
+        run: |
+          set -e
+          git add dist/github-contribution-grid-snake.svg dist/github-contribution-grid-snake-dark.svg
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git commit -m "chore: update snake"
+          attempt=0
+          until [ $attempt -ge 3 ]; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            attempt=$((attempt+1))
+            echo "Push failed, retry $attempt/3"
+            sleep 3
+          done
+          exit 1
