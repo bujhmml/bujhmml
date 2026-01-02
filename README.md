@@ -1,5 +1,4 @@
-
-<h1 align="center">Игорь (bujhmml) 👋</h1>
+<h1 align="center">Ihor (bujhmml) 👋</h1>
 
 <p align="center">
   <a href="https://www.codewars.com/users/bujhmml">
@@ -20,93 +19,110 @@
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=2500&pause=600&center=true&vCenter=true&width=820&lines=Senior-minded+Full-Stack+%7C+Automation+%26+Data+Extraction;Node.js%2FTypeScript+%7C+Next.js+%7C+FastAPI+%7C+Docker+%7C+Nginx;ETL+Pipelines+%7C+Scraping+%7C+AI+Integrations" alt="Typing" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=2200&pause=650&center=true&vCenter=true&width=900&lines=Full-Stack+Engineer+%7C+Automation+%26+Data+Engineering;Python+%7C+Node.js%2FTypeScript+%7C+Next.js+%7C+FastAPI;Docker+%7C+Nginx+%7C+CI%2FCD+%7C+Production-Ready+Systems;Scraping+at+scale+%7C+ETL+pipelines+%7C+AI+integrations" alt="Typing" />
 </p>
 
 ---
 
 ## 🧠 About
-- Full-Stack: **Node.js/TypeScript (Express)**, **Next.js**, **FastAPI**
-- Infra: **Docker Compose**, **Nginx**, CI/CD (**GitHub Actions**)
-- Data/Automation: scraping, proxies/antibot, ETL, API integrations
+I build **production-ready web systems** and **automation pipelines** end-to-end — from architecture and APIs to deployment, reliability, and data quality.
+
+**Core domains**
+- **Full-Stack:** Python (FastAPI/Django/Flask), Node.js/TypeScript (Express), Next.js/React
+- **DevOps / Production:** Docker/Compose, Nginx reverse-proxy, GitHub Actions CI/CD, Linux
+- **Data / Automation:** scraping with proxy rotation & anti-bot handling, ETL pipelines, normalization, monitoring
+- **Low-level & Security mindset:** C/C++ basics, reverse engineering fundamentals, debugging, performance & failure analysis
+
+**Engineering focus**
+- Clean APIs, predictable configs (env-based), and safe deploys
+- Reliability: idempotent migrations, zero-downtime mindset, observability-first
+- Maintainability: typing, tests, tooling, and “boring” robust solutions
 
 ---
 
-## 🏆 Codewars (видно honor/очки)
+## 🏆 Codewars (rank & honor)
 <p>
   <a href="https://www.codewars.com/users/bujhmml">
-    <img src="https://www.codewars.com/users/bujhmml/badges/small" alt="Codewars small badge" />
+    <img src="https://www.codewars.com/users/bujhmml/badges/small" alt="Codewars badge" />
   </a>
 </p>
 
 ---
 
-## 🧰 Tech Stack
+## 🧰 Tech Stack (expanded)
 <p>
-  <img src="https://skillicons.dev/icons?i=python,js,ts,nodejs,react,nextjs,fastapi,docker,nginx,mysql,postgres,redis,linux,git,github,githubactions&perline=8" alt="Skills" />
+  <img src="https://skillicons.dev/icons?i=python,cpp,c,js,ts,nodejs,react,nextjs,fastapi,django,flask,html,css,tailwind,redux,postgres,mysql,sqlite,mongodb,redis,rabbitmq,kafka,docker,kubernetes,nginx,linux,bash,git,github,githubactions,postman,selenium,graphql,swagger,regex,cmake,vscode&perline=10" alt="Skills" />
+</p>
+
+<p>
+  <img src="https://img.shields.io/badge/Backend-REST%20%7C%20WebSockets%20%7C%20OpenAPI-111?style=for-the-badge" alt="Backend" />
+  <img src="https://img.shields.io/badge/Auth-JWT%20%7C%20Refresh%20Tokens%20%7C%20RBAC-111?style=for-the-badge" alt="Auth" />
+  <img src="https://img.shields.io/badge/Data-ETL%20%7C%20Pipelines%20%7C%20Normalization-111?style=for-the-badge" alt="Data" />
+  <img src="https://img.shields.io/badge/Scraping-Proxies%20%7C%20Anti%20Bot%20%7C%20Playwright-111?style=for-the-badge" alt="Scraping" />
+  <img src="https://img.shields.io/badge/DevOps-Docker%20Compose%20%7C%20Reverse%20Proxy%20%7C%20CI%2FCD-111?style=for-the-badge" alt="DevOps" />
 </p>
 
 ---
 
-## 📌 Featured Projects (замени на реальные топ-репы)
-<p>
-  <a href="https://github.com/bujhmml/REPO_1">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=bujhmml&repo=REPO_1" alt="Repo 1" />
-  </a>
-  <a href="https://github.com/bujhmml/REPO_2">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=bujhmml&repo=REPO_2" alt="Repo 2" />
-  </a>
-</p>
-
-<p>
-  <a href="https://github.com/bujhmml/REPO_3">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=bujhmml&repo=REPO_3" alt="Repo 3" />
-  </a>
-  <a href="https://github.com/bujhmml/REPO_4">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=bujhmml&repo=REPO_4" alt="Repo 4" />
-  </a>
-</p>
+## ✅ What I deliver
+- **APIs & backends:** auth, billing-ready patterns, integrations, migrations, background jobs
+- **Web apps:** SEO-friendly Next.js, admin panels, dashboards, i18n-ready UI
+- **Automation:** scrapers, bots, scheduled workers, data pipelines, monitoring & alerts
+- **Production:** containerized deploys, reverse-proxy, secure configs, stable environments
 
 ---
 
-## 📊 GitHub Stats
-<p>
-  <img src="https://github-readme-stats.vercel.app/api?username=bujhmml&show_icons=true&include_all_commits=true&rank_icon=github" alt="Stats" />
-</p>
-
-<p>
-  <img src="https://streak-stats.demolab.com?user=bujhmml" alt="Streak" />
-</p>
-
-<p>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=bujhmml&layout=compact&langs_count=10" alt="Top langs" />
-</p>
-
-<p>
-  <img src="https://github-profile-trophy.vercel.app/?username=bujhmml&no-frame=true&column=7" alt="Trophies" />
-</p>
-
-<p>
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=bujhmml" alt="Activity graph" />
-</p>
+## 🛠️ Production & DevOps toolkit
+- Docker Compose stacks, multi-service environments, env-driven configuration
+- Nginx routing (apps + admin + API), SSL termination patterns, caching
+- CI/CD pipelines (build/test/deploy), safe rollouts, rollback-ready deployments
+- Logging/metrics mindset: structured logs, health checks, failure visibility
 
 ---
 
-## 🤝 Links
-- Telegram: https://t.me/YOUR_TELEGRAM
-- Email: mailto:YOUR_EMAIL
-- LinkedIn: https://www.linkedin.com/in/YOUR_LINKEDIN
-- Portfolio: YOUR_PORTFOLIO
+## 🧪 Quality & Engineering practices
+- Typed codebases (TypeScript / Python typing), clear boundaries, predictable interfaces
+- Test strategy: unit/integration where it pays off; pragmatic coverage
+- Idempotent migrations, schema evolution without downtime surprises
+- Security basics: secrets hygiene, least privilege, input validation, dependency awareness
+
+---
+
+## 🔗 Links
+<p align="left">
+  <a href="https://t.me/YOUR_TELEGRAM">
+    <img src="https://img.shields.io/badge/Telegram-@YOUR_TELEGRAM-2CA5E0?logo=telegram&logoColor=white&style=for-the-badge" alt="Telegram" />
+  </a>
+  <a href="mailto:YOUR_EMAIL">
+    <img src="https://img.shields.io/badge/Email-YOUR_EMAIL-EA4335?logo=gmail&logoColor=white&style=for-the-badge" alt="Email" />
+  </a>
+  <a href="https://www.linkedin.com/in/YOUR_LINKEDIN">
+    <img src="https://img.shields.io/badge/LinkedIn-YOUR_LINKEDIN-0A66C2?logo=linkedin&logoColor=white&style=for-the-badge" alt="LinkedIn" />
+  </a>
+  <a href="YOUR_PORTFOLIO">
+    <img src="https://img.shields.io/badge/Portfolio-Website-111?logo=vercel&logoColor=white&style=for-the-badge" alt="Portfolio" />
+  </a>
+  <a href="https://www.codewars.com/users/bujhmml">
+    <img src="https://img.shields.io/badge/Codewars-bujhmml-B1361E?style=for-the-badge&logo=codewars&logoColor=white" alt="Codewars" />
+  </a>
+</p>
 
 ---
 
 <details>
-  <summary><b>🧩 What I build</b></summary>
+  <summary><b>🧩 Areas I enjoy</b></summary>
 
-- Production-ready web apps (auth, payments, integrations)
-- Admin panels & dashboards
-- Dockerized deployments, reverse-proxy, CI/CD
-- Scrapers with proxy rotation, anti-bot handling
-- ETL pipelines, normalization, monitoring
+- Hard debugging, production incidents, and “why does it fail only in prod?”
+- Performance and reliability: bottlenecks, queues, caching, database tuning basics
+- Reverse engineering fundamentals: understanding binaries, behavior, and integrations
+- Building clean automation: resilient scrapers, retries, backoff, observability
+
+</details>
+
+<details>
+  <summary><b>📌 Tip: make your top repos shine</b></summary>
+
+Use GitHub “Customize your pins” to pin 6 best repositories on your profile.
+Your README will look senior, and pins will show real work without extra widgets.
 
 </details>
