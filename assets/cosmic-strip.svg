@@ -1,0 +1,42 @@
+<svg width="1200" height="140" viewBox="0 0 1200 140" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Cosmic strip</title>
+  <desc id="desc">Animated-look starfield strip with gradients and streaks.</desc>
+  <defs>
+    <linearGradient id="space" x1="0" y1="0" x2="1200" y2="140" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#05060F"/>
+      <stop offset="0.5" stop-color="#0B1120"/>
+      <stop offset="1" stop-color="#0D0F1F"/>
+    </linearGradient>
+    <linearGradient id="trail" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#22D3EE" stop-opacity="0"/>
+      <stop offset="0.3" stop-color="#22D3EE" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#A855F7" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="spark" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#E0F2FE"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="140" fill="url(#space)"/>
+  <g opacity="0.4">
+    <path d="M80 20L260 38" stroke="url(#trail)" stroke-width="6" stroke-linecap="round"/>
+    <path d="M320 70L620 62" stroke="url(#trail)" stroke-width="6" stroke-linecap="round"/>
+    <path d="M760 30L1080 46" stroke="url(#trail)" stroke-width="6" stroke-linecap="round"/>
+    <path d="M140 108L420 96" stroke="url(#trail)" stroke-width="6" stroke-linecap="round"/>
+    <path d="M700 110L1040 118" stroke="url(#trail)" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  <g>
+    <circle cx="140" cy="52" r="3" fill="#E0F2FE"/>
+    <circle cx="380" cy="32" r="2.5" fill="#A5F3FC"/>
+    <circle cx="540" cy="90" r="2.5" fill="#C084FC"/>
+    <circle cx="760" cy="64" r="3" fill="#E0F2FE"/>
+    <circle cx="980" cy="26" r="2" fill="#E0F2FE"/>
+    <circle cx="1120" cy="90" r="2.5" fill="#C084FC"/>
+    <circle cx="240" cy="122" r="2" fill="#A5F3FC"/>
+    <circle cx="560" cy="126" r="2.5" fill="#A855F7"/>
+  </g>
+  <g opacity="0.8">
+    <circle cx="320" cy="60" r="10" fill="url(#spark)"/>
+    <circle cx="900" cy="100" r="12" fill="url(#spark)"/>
+  </g>
+</svg>

@@ -1,0 +1,17 @@
+<svg width="600" height="260" viewBox="0 0 600 260" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">3D contributions placeholder</title>
+  <desc id="desc">Placeholder until the 3D contribution generator action runs.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#0B1120"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#A855F7"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="260" rx="22" fill="url(#bg)" stroke="url(#glow)" stroke-width="3"/>
+  <text x="50%" y="46%" text-anchor="middle" font-family="'SFMono-Regular','Fira Code',monospace" font-size="20" fill="#C7D2FE">3D contribution skylines</text>
+  <text x="50%" y="60%" text-anchor="middle" font-family="'Inter','Segoe UI',sans-serif" font-size="15" fill="#94A3B8">auto-generated via GitHub Action</text>
+</svg>

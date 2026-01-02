@@ -1,0 +1,16 @@
+<svg width="600" height="200" viewBox="0 0 600 200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Contribution Snake placeholder</title>
+  <desc id="desc">Placeholder until the GitHub Action renders the animated snake.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="600" y2="200">
+      <stop stop-color="#0B1120"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="stroke" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#A855F7"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="200" rx="18" fill="url(#bg)" stroke="url(#stroke)" stroke-width="3"/>
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="'SFMono-Regular','Fira Code',monospace" font-size="20" fill="#E0F2FE">awaiting nightly snake run</text>
+</svg>
