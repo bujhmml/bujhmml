@@ -1,17 +1,23 @@
-
-<svg width='1200' height='32' viewBox='0 0 1200 32' fill='none' xmlns='http://www.w3.org/2000/svg' role='presentation'>
+<svg width="1200" height="40" viewBox="0 0 1200 40" fill="none" xmlns="http://www.w3.org/2000/svg" role="presentation">
   <defs>
-    <linearGradient id='line' x1='0' y1='16' x2='1200' y2='16' gradientUnits='userSpaceOnUse'>
-      <stop offset='0' stop-color='#000000' stop-opacity='0'/>
-      <stop offset='0.5' stop-color='#FFFFFF' stop-opacity='0.65'/>
-      <stop offset='1' stop-color='#000000' stop-opacity='0'/>
+    <linearGradient id="line" x1="120" y1="20" x2="1080" y2="20" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8FD4F6" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#E4F8FF" stop-opacity="0.72"/>
+      <stop offset="1" stop-color="#8FD4F6" stop-opacity="0"/>
     </linearGradient>
-    <radialGradient id='orb' cx='0.5' cy='0.5' r='0.7'>
-      <stop offset='0' stop-color='#FFFFFF' stop-opacity='0.9'/>
-      <stop offset='1' stop-color='#0b0b0b' stop-opacity='0'/>
+    <radialGradient id="pulse" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(600 20) rotate(90) scale(14 14)">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
     </radialGradient>
   </defs>
-  <rect x='0' y='14' width='1200' height='4' rx='2' fill='url(#line)'/>
-  <circle cx='600' cy='16' r='10' fill='url(#orb)'/>
-  <circle cx='600' cy='16' r='3' fill='#F5F5F5'/>
+
+  <path d="M120 20H1080" stroke="url(#line)" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="600" cy="20" r="2.8" fill="#F4FCFF"/>
+  <circle cx="600" cy="20" r="8" fill="url(#pulse)">
+    <animate attributeName="opacity" values="0.16;0.7;0.16" dur="4.4s" repeatCount="indefinite"/>
+    <animate attributeName="r" values="5;10;5" dur="4.4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cy="20" r="2.2" fill="#A9EAFF">
+    <animate attributeName="cx" values="150;1050;150" dur="11s" repeatCount="indefinite"/>
+  </circle>
 </svg>
