@@ -61,15 +61,15 @@
 <h2 align="center">Contributions / Activity</h2>
 
 <p align="center">
+  <img src="./profile-skyline/github-skyline.svg" alt="GitHub skyline" />
+</p>
+
+<p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./dist/github-contribution-grid-snake-dark.svg" />
     <source media="(prefers-color-scheme: light)" srcset="./dist/github-contribution-grid-snake.svg" />
     <img src="./dist/github-contribution-grid-snake-dark.svg" alt="GitHub contribution snake" />
   </picture>
-</p>
-
-<p align="center">
-  <img src="./profile-3d-contrib/profile-night-view.svg" alt="GitHub 3D contribution chart" />
 </p>
 
 <p align="center">

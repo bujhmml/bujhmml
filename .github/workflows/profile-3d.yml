@@ -1,4 +1,4 @@
-name: Generate 3D Profile
+name: Generate Skyline
 
 on:
   schedule:
@@ -21,38 +21,10 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Render 3D contributions
-        uses: yoshi389111/github-profile-3d-contrib@0.7.1
+      - name: Generate skyline asset
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          USERNAME: ${{ github.repository_owner }}
-
-      - name: Keep curated night view asset
-        run: |
-          python - <<'PY'
-          from pathlib import Path
-
-          base = Path("profile-3d-contrib")
-          base.mkdir(exist_ok=True)
-
-          preferred = base / "profile-night-view.svg"
-          candidates = [
-              preferred,
-              base / "profile-night-green.svg",
-              base / "profile-green.svg",
-          ] + sorted(base.glob("*.svg"))
-
-          source = next((candidate for candidate in candidates if candidate.exists()), None)
-          if source is None:
-              raise SystemExit("No 3D contribution SVG was generated")
-
-          if source != preferred:
-              preferred.write_text(source.read_text())
-
-          for svg in base.glob("*.svg"):
-              if svg != preferred:
-                  svg.unlink()
-          PY
+        run: python3 scripts/render_profile_assets.py skyline --username "${{ github.repository_owner }}"
 
       - name: Configure git
         run: |
@@ -63,11 +35,11 @@ jobs:
         run: |
           set -euo pipefail
           branch="${GITHUB_REF_NAME}"
-          git add -A profile-3d-contrib
+          git add profile-skyline/github-skyline.svg
           if git diff --cached --quiet; then
             echo "No changes to commit."
             exit 0
           fi
-          git commit -m "chore: refresh 3d contribution asset [skip ci]"
+          git commit -m "chore: refresh skyline asset [skip ci]"
           git pull --rebase origin "$branch"
           git push origin HEAD:"$branch"
