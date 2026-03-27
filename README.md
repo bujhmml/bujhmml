@@ -61,8 +61,22 @@
 <h2 align="center">Contributions / Activity</h2>
 
 <p align="center">
-  <img src="./profile-skyline/github-skyline.svg" alt="GitHub skyline" />
+  Activity assets are generated independently: snake stays in <code>dist/</code>, and the official GitHub skyline STL is generated into <code>assets/skyline/</code>.
+  <br />
+  Automation details live in <a href="./docs/profile-assets.md"><code>docs/profile-assets.md</code></a>.
 </p>
+
+<h3 align="center">GitHub Skyline</h3>
+
+<p align="center">
+  This profile now uses the official <code>github/gh-skyline</code> GitHub CLI extension.
+  <br />
+  The first successful run of <a href="./.github/workflows/skyline.yml"><code>skyline.yml</code></a> writes the real STL artifact to <code>assets/skyline/bujhmml-github-skyline.stl</code>.
+  <br />
+  GitHub renders STL files on their file page, so this README intentionally avoids a fake SVG preview.
+</p>
+
+<h3 align="center">Snake</h3>
 
 <p align="center">
   <picture>
@@ -85,6 +99,12 @@
   ·
   <a href="https://github.com/bujhmml?tab=repositories"><code>github</code></a>
 </p>
+
+<p align="center">
+  <img src="./assets/divider.svg" alt="" />
+</p>
+
+<h2 align="center">Decorative Assets</h2>
 
 <p align="center">
   <img src="./assets/cosmic-strip.svg" alt="Subtle cosmic strip" />

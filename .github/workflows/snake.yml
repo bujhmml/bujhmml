@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: profile-assets-${{ github.ref }}
+  group: profile-snake-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
@@ -34,12 +34,11 @@ jobs:
       - name: Commit and push if changed
         run: |
           set -euo pipefail
-          branch="${GITHUB_REF_NAME}"
           git add dist/github-contribution-grid-snake.svg dist/github-contribution-grid-snake-dark.svg
           if git diff --cached --quiet; then
             echo "No changes to commit."
             exit 0
           fi
           git commit -m "chore: refresh snake asset [skip ci]"
-          git pull --rebase origin "$branch"
-          git push origin HEAD:"$branch"
+          git pull --rebase origin main
+          git push origin HEAD:main

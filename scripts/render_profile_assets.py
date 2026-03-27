@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render skyline and snake SVG assets for the GitHub profile README."""
+"""Render snake SVG assets for the GitHub profile README."""
 
 from __future__ import annotations
 
@@ -35,8 +35,6 @@ SNAKE_SEGMENTS = (
     (4.1, 7.8, 2.6, "tail"),
 )
 FOOD_COUNT = 20
-
-SKYLINE_VIEWBOX = (0, 0, 880, 220)
 
 PUBLIC_LEVEL_WEIGHTS = {0: 0, 1: 2, 2: 5, 3: 9, 4: 14}
 GRAPHQL_LEVELS = {
@@ -80,25 +78,6 @@ SNAKE_PALETTES = {
         "food_core": "#F7FDFF",
         "food_glow": "#5DD4FF",
     },
-}
-
-SKYLINE_PALETTE = {
-    "bg0": "#03060B",
-    "bg1": "#06111D",
-    "bg2": "#040913",
-    "frame": "#97D8F2",
-    "frame_soft": "#1C2B37",
-    "scan": "#D8F3FF",
-    "moon": "#CDEBFF",
-    "moon_glow": "#53C8F5",
-    "tower_back": "#0B1622",
-    "tower_front": "#0F2130",
-    "tower_top": "#173548",
-    "window": "#D9F6FF",
-    "window_dim": "#86CAE6",
-    "roof": "#AEE8FF",
-    "ground": "#08111C",
-    "ground_line": "#B6E8FB",
 }
 
 
@@ -486,163 +465,11 @@ def render_snake(weeks: list[list[ContributionDay]], variant: str, output_path: 
     output_path.write_text(svg)
 
 
-def smooth(values: list[float], radius: int = 1) -> list[float]:
-    result: list[float] = []
-    for index in range(len(values)):
-        start = max(0, index - radius)
-        end = min(len(values), index + radius + 1)
-        chunk = values[start:end]
-        result.append(sum(chunk) / len(chunk))
-    return result
-
-
-def render_skyline(weeks: list[list[ContributionDay]], output_path: Path) -> None:
-    vx, vy, width, height = SKYLINE_VIEWBOX
-    base_y = 184
-    margin_x = 18
-    tower_width = 12
-    weekly_scores = [sum(day.count for day in week) for week in weeks]
-    max_score = max(weekly_scores) if any(weekly_scores) else 1
-    normalized = [math.sqrt(score / max_score) for score in weekly_scores]
-    back_heights = []
-    for index, value in enumerate(smooth(normalized, radius=2)):
-        if weekly_scores[index] == 0:
-            back_heights.append(10 + (index % 4) * 2.4)
-        else:
-            back_heights.append(22 + value * 64)
-
-    front_heights = []
-    for index, value in enumerate(normalized):
-        if weekly_scores[index] == 0:
-            front_heights.append(8 + (index % 5) * 2.2)
-        else:
-            front_heights.append(18 + value * 118)
-
-    back_segments = []
-    for index, tower_height in enumerate(back_heights):
-        x = margin_x + index * CELL_STEP + 2
-        y = base_y - tower_height
-        back_segments.append(
-            f"L{fmt(x)} {fmt(base_y)} L{fmt(x)} {fmt(y)} L{fmt(x + tower_width - 4)} {fmt(y)} "
-            f"L{fmt(x + tower_width - 4)} {fmt(base_y)}"
-        )
-    back_path = (
-        f"M{fmt(margin_x)} {fmt(base_y)} "
-        + " ".join(back_segments)
-        + f" L{fmt(width - margin_x)} {fmt(base_y)} L{fmt(width - margin_x)} {fmt(height)} "
-        + f"L{fmt(margin_x)} {fmt(height)} Z"
-    )
-
-    front_towers = []
-    windows = []
-    for index, tower_height in enumerate(front_heights):
-        x = margin_x + index * CELL_STEP
-        y = base_y - tower_height
-        tone = "tower-top" if weekly_scores[index] >= max_score * 0.55 else "tower-front"
-        front_towers.append(
-            f'<rect class="{tone}" x="{fmt(x)}" y="{fmt(y)}" width="{tower_width}" '
-            f'height="{fmt(tower_height)}" rx="2" ry="2"/>'
-        )
-
-        if weekly_scores[index] >= max_score * 0.72:
-            spike_height = 8 + (index % 3) * 3
-            front_towers.append(
-                f'<path d="M{fmt(x + tower_width / 2)} {fmt(y)}V{fmt(y - spike_height)}" '
-                f'stroke="{SKYLINE_PALETTE["roof"]}" stroke-opacity="0.44" stroke-linecap="round"/>'
-            )
-
-        window_rows = max(0, int(tower_height // 24) - 1)
-        window_columns = 1 if tower_width < 14 else 2
-        for row in range(window_rows):
-            for column in range(window_columns):
-                wx = x + 2 + column * 4.5
-                wy = base_y - 10 - row * 16
-                fill = SKYLINE_PALETTE["window"] if (row + index + column) % 3 == 0 else SKYLINE_PALETTE["window_dim"]
-                opacity = "0.62" if fill == SKYLINE_PALETTE["window"] else "0.34"
-                windows.append(
-                    f'<rect x="{fmt(wx)}" y="{fmt(wy)}" width="1.9" height="5.2" rx="0.8" '
-                    f'fill="{fill}" fill-opacity="{opacity}"/>'
-                )
-
-    star_nodes = []
-    for cx, cy, radius, duration, delay in (
-        (102, 34, 1.2, 6.4, 0.2),
-        (178, 72, 1.1, 5.8, 1.1),
-        (262, 22, 1.3, 7.2, 2.0),
-        (386, 58, 1.0, 6.7, 1.5),
-        (512, 32, 1.2, 6.0, 0.7),
-        (664, 48, 1.1, 7.0, 1.8),
-        (786, 28, 1.4, 5.9, 0.5),
-    ):
-        star_nodes.append(
-            f'<circle cx="{fmt(cx)}" cy="{fmt(cy)}" r="{fmt(radius)}" fill="{SKYLINE_PALETTE["window"]}" opacity="0.22">'
-            f'<animate attributeName="opacity" values="0.18;0.86;0.18" dur="{fmt(duration)}s" '
-            f'begin="-{fmt(delay)}s" repeatCount="indefinite"/></circle>'
-        )
-
-    svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="{vx} {vy} {width} {height}" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="title desc">
-  <title id="title">GitHub skyline</title>
-  <desc id="desc">A skyline-style GitHub contribution visual generated from recent weekly activity.</desc>
-  <defs>
-    <linearGradient id="sky-bg" x1="{vx}" y1="{vy}" x2="{width}" y2="{height}" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="{SKYLINE_PALETTE['bg0']}"/>
-      <stop offset="0.55" stop-color="{SKYLINE_PALETTE['bg1']}"/>
-      <stop offset="1" stop-color="{SKYLINE_PALETTE['bg2']}"/>
-    </linearGradient>
-    <linearGradient id="moon-core" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="{SKYLINE_PALETTE['moon']}"/>
-      <stop offset="1" stop-color="#8EDCFF"/>
-    </linearGradient>
-    <radialGradient id="moon-glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(718 74) rotate(90) scale(86 86)">
-      <stop stop-color="{SKYLINE_PALETTE['moon_glow']}" stop-opacity="0.22"/>
-      <stop offset="1" stop-color="{SKYLINE_PALETTE['moon_glow']}" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="frame" x1="40" y1="22" x2="840" y2="198" gradientUnits="userSpaceOnUse">
-      <stop stop-color="{SKYLINE_PALETTE['frame']}" stop-opacity="0.34"/>
-      <stop offset="0.5" stop-color="{SKYLINE_PALETTE['frame']}" stop-opacity="0.16"/>
-      <stop offset="1" stop-color="{SKYLINE_PALETTE['frame']}" stop-opacity="0.28"/>
-    </linearGradient>
-    <pattern id="scanlines" width="10" height="10" patternUnits="userSpaceOnUse">
-      <rect width="10" height="10" fill="transparent"/>
-      <path d="M0 2.2H10" stroke="{SKYLINE_PALETTE['scan']}" stroke-opacity="0.05"/>
-    </pattern>
-  </defs>
-  <style>
-    .tower-front{{fill:{SKYLINE_PALETTE['tower_front']}}}
-    .tower-top{{fill:{SKYLINE_PALETTE['tower_top']}}}
-  </style>
-  <rect width="{width}" height="{height}" rx="24" fill="url(#sky-bg)"/>
-  <rect width="{width}" height="{height}" rx="24" fill="url(#moon-glow)"/>
-  <rect x="12" y="12" width="{width - 24}" height="{height - 24}" rx="18" fill="none" stroke="url(#frame)" stroke-width="1.4"/>
-  <rect x="24" y="24" width="{width - 48}" height="{height - 48}" rx="14" fill="none" stroke="{SKYLINE_PALETTE['frame_soft']}" stroke-opacity="0.62"/>
-  <circle cx="718" cy="74" r="22" fill="url(#moon-core)"/>
-  <circle cx="718" cy="74" r="38" fill="none" stroke="{SKYLINE_PALETTE['frame']}" stroke-opacity="0.18"/>
-  {''.join(star_nodes)}
-  <g opacity="0.18">
-    <rect width="{width}" height="{height}" rx="24" fill="url(#scanlines)">
-      <animateTransform attributeName="transform" type="translate" values="0 0;0 6;0 0" dur="18s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-  <path d="{back_path}" fill="{SKYLINE_PALETTE['tower_back']}" opacity="0.82"/>
-  <g>{''.join(front_towers)}</g>
-  <g>{''.join(windows)}</g>
-  <rect x="0" y="{base_y}" width="{width}" height="{height - base_y}" fill="{SKYLINE_PALETTE['ground']}"/>
-  <path d="M0 {base_y}H{width}" stroke="{SKYLINE_PALETTE['ground_line']}" stroke-opacity="0.28"/>
-  <path d="M0 {base_y + 12}H{width}" stroke="{SKYLINE_PALETTE['frame_soft']}" stroke-opacity="0.72"/>
-  <rect x="-120" y="-32" width="140" height="{height * 1.7}" fill="url(#frame)" opacity="0.08" transform="rotate(8 440 110)">
-    <animate attributeName="x" values="-120;920;-120" dur="34s" repeatCount="indefinite"/>
-  </rect>
-</svg>
-"""
-    output_path.parent.mkdir(parents=True, exist_ok=True)
-    output_path.write_text(svg)
-
-
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Render GitHub profile SVG assets.")
+    parser = argparse.ArgumentParser(description="Render GitHub profile snake SVG assets.")
     parser.add_argument(
         "target",
-        choices=("all", "snake", "skyline"),
+        choices=("snake",),
         help="Which asset set to generate.",
     )
     parser.add_argument(
@@ -657,10 +484,7 @@ def main() -> int:
     args = parse_args()
     weeks = load_contribution_weeks(args.username)
 
-    if args.target in {"all", "skyline"}:
-        render_skyline(weeks, Path("profile-skyline/github-skyline.svg"))
-
-    if args.target in {"all", "snake"}:
+    if args.target == "snake":
         render_snake(weeks, "light", Path("dist/github-contribution-grid-snake.svg"))
         render_snake(weeks, "dark", Path("dist/github-contribution-grid-snake-dark.svg"))
 
