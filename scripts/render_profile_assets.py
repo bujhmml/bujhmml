@@ -35,6 +35,28 @@ SNAKE_SEGMENTS = (
     (4.1, 7.8, 2.6, "tail"),
 )
 FOOD_COUNT = 20
+SNAKE_WAYPOINTS = (
+    (0, 6),
+    (4, 2),
+    (10, 0),
+    (16, 4),
+    (22, 6),
+    (28, 1),
+    (34, 0),
+    (40, 5),
+    (46, 6),
+    (52, 2),
+    (52, 0),
+    (48, 4),
+    (42, 6),
+    (36, 1),
+    (30, 0),
+    (24, 5),
+    (18, 6),
+    (12, 2),
+    (6, 0),
+    (0, 4),
+)
 
 PUBLIC_LEVEL_WEIGHTS = {0: 0, 1: 2, 2: 5, 3: 9, 4: 14}
 GRAPHQL_LEVELS = {
@@ -257,40 +279,120 @@ def load_contribution_weeks(username: str) -> list[list[ContributionDay]]:
     raise RuntimeError("; ".join(errors))
 
 
-def snake_path() -> list[tuple[int, int]]:
-    path: list[tuple[int, int]] = []
-    for column in range(GRAPH_COLUMNS):
-        rows = range(GRAPH_ROWS) if column % 2 == 0 else range(GRAPH_ROWS - 1, -1, -1)
-        for row in rows:
+def walk_axis(current: int, target: int) -> Iterable[int]:
+    step = 1 if target > current else -1
+    return range(current + step, target + step, step)
+
+
+def connect_cells(
+    start: tuple[int, int],
+    end: tuple[int, int],
+    *,
+    horizontal_first: bool,
+) -> list[tuple[int, int]]:
+    column, row = start
+    target_column, target_row = end
+    path = [start]
+
+    def move_horizontal() -> None:
+        nonlocal column
+        for next_column in walk_axis(column, target_column):
+            column = next_column
             path.append((column, row))
+
+    def move_vertical() -> None:
+        nonlocal row
+        for next_row in walk_axis(row, target_row):
+            row = next_row
+            path.append((column, row))
+
+    if column != target_column or row != target_row:
+        if horizontal_first:
+            if column != target_column:
+                move_horizontal()
+            if row != target_row:
+                move_vertical()
+        else:
+            if row != target_row:
+                move_vertical()
+            if column != target_column:
+                move_horizontal()
+
     return path
 
 
-def active_food_indices(weeks: list[list[ContributionDay]]) -> list[int]:
-    path = snake_path()
-    active = [
-        index
-        for index, (column, row) in enumerate(path)
-        if weeks[column][row].level > 0
-    ]
-    pool = active if len(active) >= FOOD_COUNT else list(range(len(path)))
+def snake_path() -> list[tuple[int, int]]:
+    anchors = list(SNAKE_WAYPOINTS)
+    path = [anchors[0]]
+    for index, target in enumerate(anchors[1:] + anchors[:1]):
+        segment = connect_cells(path[-1], target, horizontal_first=index % 2 == 0)
+        path.extend(segment[1:])
+    if path[-1] == path[0]:
+        path.pop()
+    return path
 
-    if len(pool) <= FOOD_COUNT:
-        return pool
 
+def score_food_candidate(day: ContributionDay, row: int, centre_row: float) -> tuple[int, int, int, float]:
+    row_bias = -abs(row - centre_row)
+    return (1 if day.level > 0 else 0, day.level, day.count, row_bias)
+
+
+def active_food_indices(weeks: list[list[ContributionDay]], path: list[tuple[int, int]]) -> list[int]:
+    path_length = len(path)
+    unique_path: list[tuple[int, int, int]] = []
+    seen_cells: set[tuple[int, int]] = set()
+    for index, (column, row) in enumerate(path):
+        cell = (column, row)
+        if cell in seen_cells:
+            continue
+        seen_cells.add(cell)
+        unique_path.append((index, column, row))
+
+    if len(unique_path) <= FOOD_COUNT:
+        return [index for index, _, _ in unique_path]
+
+    window = path_length / FOOD_COUNT
+    radius = max(10, int(window * 0.72))
+    centre_offset = window * 0.58
     picked: list[int] = []
-    for slot in range(FOOD_COUNT):
-        raw = round(slot * (len(pool) - 1) / (FOOD_COUNT - 1))
-        candidate = pool[raw]
-        if picked and candidate <= picked[-1]:
-            candidate = pool[min(raw + 1, len(pool) - 1)]
-        picked.append(candidate)
+    used_cells: set[tuple[int, int]] = set()
 
-    unique = list(dict.fromkeys(picked))
-    if len(unique) < FOOD_COUNT:
-        remaining = [item for item in pool if item not in unique]
-        unique.extend(remaining[: FOOD_COUNT - len(unique)])
-    return unique[:FOOD_COUNT]
+    def well_spaced(column: int, row: int) -> bool:
+        return all(abs(column - used_column) + abs(row - used_row) >= 4 for used_column, used_row in used_cells)
+
+    for slot in range(FOOD_COUNT):
+        centre = int(round((slot * window + centre_offset) % path_length))
+        centre_row = 1.5 + ((slot * 3) % GRAPH_ROWS)
+        candidates = []
+        for index, column, row in unique_path:
+            cyclic_distance = min((index - centre) % path_length, (centre - index) % path_length)
+            if cyclic_distance > radius or (column, row) in used_cells or not well_spaced(column, row):
+                continue
+            day = weeks[column][row]
+            score = score_food_candidate(day, row, centre_row)
+            candidates.append((score, -cyclic_distance, index, column, row))
+
+        if not candidates:
+            for index, column, row in unique_path:
+                if (column, row) in used_cells or not well_spaced(column, row):
+                    continue
+                cyclic_distance = min((index - centre) % path_length, (centre - index) % path_length)
+                score = score_food_candidate(weeks[column][row], row, centre_row)
+                candidates.append((score, -cyclic_distance, index, column, row))
+
+        if not candidates:
+            for index, column, row in unique_path:
+                if (column, row) in used_cells:
+                    continue
+                cyclic_distance = min((index - centre) % path_length, (centre - index) % path_length)
+                score = score_food_candidate(weeks[column][row], row, centre_row)
+                candidates.append((score, -cyclic_distance, index, column, row))
+
+        _, _, index, column, row = max(candidates)
+        picked.append(index)
+        used_cells.add((column, row))
+
+    return sorted(picked)
 
 
 def snake_translate(column: int, row: int, inset: float) -> tuple[float, float]:
@@ -352,25 +454,26 @@ def render_snake(weeks: list[list[ContributionDay]], variant: str, output_path: 
         )
 
     food_nodes = []
-    for slot, index in enumerate(active_food_indices(weeks)):
+    for slot, index in enumerate(active_food_indices(weeks, path)):
         column, row = path[index]
         x, y = cell_rect(column, row)
         cx = x + CELL_SIZE / 2
         cy = y + CELL_SIZE / 2
-        arrival = (index / path_length) * SNAKE_DURATION
-        phase = SNAKE_DURATION - arrival
+        arrival = index / path_length
+        vanish_start = max(0.0, arrival - 0.012)
+        vanish_end = min(1.0, arrival + 0.022)
         pulse = 4.6 + (slot % 4) * 0.25
         food_nodes.append(
             f'<g class="food" transform="translate({fmt(cx)} {fmt(cy)})">'
             f'<circle class="food-halo" r="{fmt(pulse)}">'
             f'<animate attributeName="opacity" dur="{fmt(SNAKE_DURATION)}s" repeatCount="indefinite" '
-            f'begin="-{fmt(phase)}s" values="0.1;0.62;0.62;0.1" keyTimes="0;0.04;0.96;1"/>'
+            f'values="0.18;0.62;0;0" keyTimes="0;{fmt(vanish_start)};{fmt(vanish_end)};1"/>'
             f'<animate attributeName="r" dur="{fmt(SNAKE_DURATION)}s" repeatCount="indefinite" '
-            f'begin="-{fmt(phase)}s" values="{fmt(pulse + 1.8)};{fmt(pulse)};{fmt(pulse)};{fmt(pulse + 1.8)}" '
-            f'keyTimes="0;0.04;0.96;1"/></circle>'
+            f'values="{fmt(pulse + 1.3)};{fmt(pulse)};{fmt(max(1.4, pulse - 1.9))};{fmt(max(1.4, pulse - 1.9))}" '
+            f'keyTimes="0;{fmt(vanish_start)};{fmt(vanish_end)};1"/></circle>'
             f'<circle class="food-core" r="2.35">'
             f'<animate attributeName="opacity" dur="{fmt(SNAKE_DURATION)}s" repeatCount="indefinite" '
-            f'begin="-{fmt(phase)}s" values="0.18;1;1;0.18" keyTimes="0;0.04;0.96;1"/>'
+            f'values="0.42;1;0;0" keyTimes="0;{fmt(vanish_start)};{fmt(vanish_end)};1"/>'
             f'</circle></g>'
         )
 
