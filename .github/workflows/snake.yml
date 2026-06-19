@@ -1,44 +1,25 @@
-name: Generate Snake
+name: snake
 
 on:
   schedule:
-    - cron: "12 0 * * *"
+    - cron: "0 */12 * * *"
   workflow_dispatch:
+  push:
+    branches: [main, master]
 
 permissions:
   contents: write
-
-concurrency:
-  group: profile-snake-${{ github.ref }}
-  cancel-in-progress: false
 
 jobs:
   snake:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: Platane/snk@v3
         with:
-          fetch-depth: 0
-
-      - name: Generate snake variants
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python3 scripts/render_profile_assets.py snake --username "${{ github.repository_owner }}"
-
-      - name: Configure git
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-
-      - name: Commit and push if changed
-        run: |
-          set -euo pipefail
-          git add dist/github-contribution-grid-snake.svg dist/github-contribution-grid-snake-dark.svg
-          if git diff --cached --quiet; then
-            echo "No changes to commit."
-            exit 0
-          fi
-          git commit -m "chore: refresh snake asset [skip ci]"
-          git pull --rebase origin main
-          git push origin HEAD:main
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            assets/github-snake.svg?palette=github-dark&color_snake=e3b341&color_dots=1a1008,4a1a18,8a2a26,c8322b,e23b32
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: regenerate snake"
+          file_pattern: assets/github-snake.svg

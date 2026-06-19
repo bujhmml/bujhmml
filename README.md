@@ -1,97 +1,49 @@
-<p align="center">
-  <img src="./assets/banner.svg" alt="bujhmml cosmic engineering banner" />
-</p>
+<div align="center">
 
-<p align="center">
-  Backend-first engineer shipping reliable APIs, internal platforms, and delivery pipelines.
-  <br />
-  Comfortable across product UI, observability, automation, and data-heavy workflows.
-</p>
+<img src="assets/hero.svg" width="100%" alt="bujhmml" />
 
-<p align="center">
-  <code>Python</code>
-  <code>TypeScript</code>
-  <code>FastAPI</code>
-  <code>Node.js</code>
-  <code>React</code>
-  <code>PostgreSQL</code>
-  <code>Redis</code>
-  <code>Docker</code>
-  <code>Kubernetes</code>
-  <code>GitHub Actions</code>
-</p>
+<br/><br/>
 
-<p align="center">
-  <img src="./assets/divider.svg" alt="" />
-</p>
+<img src="https://skillicons.dev/icons?i=py,fastapi,django,ts,nodejs,react,nextjs,postgres,redis,rabbitmq,docker,kubernetes,nginx,linux,graphql,githubactions&theme=dark&perline=8" alt="stack" />
 
-<h2 align="center">Core Focus</h2>
+</div>
 
-<table align="center" cellpadding="12">
-  <tr>
-    <td width="440" valign="top">
-      <strong>Backend / APIs / Integrations</strong><br />
-      FastAPI, Django, Node.js, GraphQL, OpenAPI, PostgreSQL, Redis, RabbitMQ.<br />
-      Services built for clear contracts, steady latency, and predictable failure modes.
-    </td>
-    <td width="440" valign="top">
-      <strong>Frontend / Product UI</strong><br />
-      React, Next.js, TypeScript, dashboards, internal tools, and product-facing surfaces.<br />
-      Interfaces tuned for dense workflows without adding noise.
-    </td>
-  </tr>
-  <tr>
-    <td width="440" valign="top">
-      <strong>DevOps / Delivery / Infra</strong><br />
-      Docker, Kubernetes, Linux, Nginx, CI/CD, observability, release automation.<br />
-      Delivery paths designed for cleaner rollouts and faster feedback.
-    </td>
-    <td width="440" valign="top">
-      <strong>Data / Automation / Parsing</strong><br />
-      ETL, scraping, headless automation, reporting, extraction pipelines, workflow tooling.<br />
-      Turning repetitive operations and messy sources into stable systems.
-    </td>
-  </tr>
-</table>
+<img src="assets/divider.svg" width="100%" alt="" />
 
-<p align="center">
-  <img src="./assets/divider.svg" alt="" />
-</p>
+<div align="center">
 
-<h2 align="center">Contributions / Activity</h2>
+<img height="175" src="https://github-readme-stats.vercel.app/api?username=bujhmml&show_icons=true&include_all_commits=true&count_private=true&hide_border=false&border_color=2a2118&bg_color=00000000&title_color=e3b341&icon_color=e23b32&text_color=c9c2b4&rank_icon=github" alt="stats" />
+&nbsp;&nbsp;
+<img height="175" src="https://streak-stats.demolab.com?user=bujhmml&theme=dark&hide_border=false&border=2a2118&background=00000000&ring=e3b341&fire=e23b32&currStreakLabel=e3b341&sideLabels=c9c2b4&dates=8a7f6b&currStreakNum=f3ead7&sideNums=f3ead7&stroke=2a2118" alt="streak" />
 
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./dist/github-contribution-grid-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="./dist/github-contribution-grid-snake.svg" />
-    <img src="./dist/github-contribution-grid-snake-dark.svg" alt="GitHub contribution snake" />
-  </picture>
-</p>
+<br/>
 
-<p align="center">
-  <img src="./assets/divider.svg" alt="" />
-</p>
+<img height="175" src="https://github-readme-stats.vercel.app/api/top-langs/?username=bujhmml&layout=compact&langs_count=10&hide_border=false&border_color=2a2118&bg_color=00000000&title_color=e3b341&text_color=c9c2b4" alt="top languages" />
 
-<h2 align="center">Contact</h2>
+</div>
 
-<p align="center">
-  <a href="mailto:igorbelevskiy12@gmail.com"><code>email</code></a>
-  ·
-  <a href="https://t.me/bujhmml"><code>telegram</code></a>
-  ·
-  <a href="https://github.com/bujhmml?tab=repositories"><code>github</code></a>
-</p>
+<img src="assets/divider.svg" width="100%" alt="" />
 
-<p align="center">
-  <img src="./assets/divider.svg" alt="" />
-</p>
+<div align="center">
 
-<h2 align="center">Decorative Assets</h2>
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=bujhmml&bg_color=00000000&color=e3b341&line=e3b341&point=e23b32&area=true&area_color=3a2a10&title_color=e3b341&hide_border=true&custom_title=Contribution%20Graph" width="100%" alt="contribution activity" />
 
-<p align="center">
-  <img src="./assets/cosmic-strip.svg" alt="Subtle cosmic strip" />
-</p>
+<br/><br/>
 
-<p align="center">
-  <sub>Calm systems, sharp interfaces, quieter on-call nights.</sub>
-</p>
+<img src="assets/github-snake.svg" width="100%" alt="contribution snake" />
+
+</div>
+
+<img src="assets/divider.svg" width="100%" alt="" />
+
+<div align="center">
+
+<a href="https://github.com/bujhmml"><img src="https://cdn.simpleicons.org/github/e3b341" height="26" alt="github" /></a>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://t.me/bujhmml"><img src="https://cdn.simpleicons.org/telegram/e3b341" height="26" alt="telegram" /></a>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="mailto:igorbelevskiy12@gmail.com"><img src="https://cdn.simpleicons.org/gmail/e3b341" height="26" alt="email" /></a>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://bujhmml.fun"><img src="https://cdn.simpleicons.org/aboutdotme/e3b341" height="26" alt="site" /></a>
+
+</div>
