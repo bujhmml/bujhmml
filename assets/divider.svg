@@ -1,17 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 28" width="1400" height="28" role="img" aria-label="">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1400 120" width="1400" height="120" role="img" aria-label="">
 <defs>
-<linearGradient id="ln" x1="0" y1="0" x2="1" y2="0">
-  <stop offset="0" stop-color="#e3b341" stop-opacity="0"/>
-  <stop offset="0.22" stop-color="#e3b341" stop-opacity="0.5"/>
-  <stop offset="0.5" stop-color="#e23b32" stop-opacity="0.65"/>
-  <stop offset="0.78" stop-color="#e3b341" stop-opacity="0.5"/>
-  <stop offset="1" stop-color="#e3b341" stop-opacity="0"/>
-</linearGradient>
+  <linearGradient id="ln" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#e3b341" stop-opacity="0"/>
+    <stop offset="0.25" stop-color="#e3b341" stop-opacity="0.45"/>
+    <stop offset="0.5" stop-color="#e23b32" stop-opacity="0.6"/>
+    <stop offset="0.75" stop-color="#e3b341" stop-opacity="0.45"/>
+    <stop offset="1" stop-color="#e3b341" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="pet" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#ffd8e4"/><stop offset="100%" stop-color="#e98fb0"/>
+  </linearGradient>
+  <g id="p"><path d="M0,0 C5,-5 5,-12 0,-17 C-5,-12 -5,-5 0,0 Z" fill="url(#pet)" opacity="0.85"/></g>
+  <style>
+    @keyframes a{0%{transform:translateY(-24px) translateX(0) rotate(0)}100%{transform:translateY(140px) translateX(46px) rotate(300deg)}}
+    @keyframes b{0%{transform:translateY(-24px) translateX(0) rotate(0)}100%{transform:translateY(140px) translateX(-40px) rotate(-260deg)}}
+    .f{animation:a 7s linear infinite}.g{animation:b 8.5s linear infinite}
+  </style>
 </defs>
-<line x1="110" y1="14" x2="640" y2="14" stroke="url(#ln)" stroke-width="1.4"/>
-<line x1="760" y1="14" x2="1290" y2="14" stroke="url(#ln)" stroke-width="1.4"/>
-<circle cx="700" cy="14" r="9" fill="none" stroke="#e3b341" stroke-width="1.4" stroke-opacity="0.85"/>
-<circle cx="700" cy="14" r="3" fill="#e23b32">
-  <animate attributeName="opacity" values="0.5;1;0.5" dur="3.5s" repeatCount="indefinite"/>
-</circle>
+
+<line x1="120" y1="60" x2="640" y2="60" stroke="url(#ln)" stroke-width="1.4"/>
+<line x1="760" y1="60" x2="1280" y2="60" stroke="url(#ln)" stroke-width="1.4"/>
+<circle cx="700" cy="60" r="9" fill="none" stroke="#e3b341" stroke-width="1.4" stroke-opacity="0.85"/>
+<circle cx="700" cy="60" r="3" fill="#e23b32"><animate attributeName="opacity" values="0.5;1;0.5" dur="3.5s" repeatCount="indefinite"/></circle>
+
+<g transform="translate(70,0)"><g class="f"><use xlink:href="#p"/></g></g>
+<g transform="translate(180,0)"><g class="g" style="animation-duration:9s;animation-delay:-3s"><use xlink:href="#p"/></g></g>
+<g transform="translate(300,0)"><g class="f" style="animation-duration:6.5s;animation-delay:-5s"><use xlink:href="#p"/></g></g>
+<g transform="translate(420,0)"><g class="g" style="animation-duration:8s;animation-delay:-1.5s"><use xlink:href="#p"/></g></g>
+<g transform="translate(540,0)"><g class="f" style="animation-duration:7.5s;animation-delay:-6s"><use xlink:href="#p"/></g></g>
+<g transform="translate(880,0)"><g class="g" style="animation-duration:9.5s;animation-delay:-2.5s"><use xlink:href="#p"/></g></g>
+<g transform="translate(1000,0)"><g class="f" style="animation-duration:6.8s;animation-delay:-4.5s"><use xlink:href="#p"/></g></g>
+<g transform="translate(1120,0)"><g class="g" style="animation-duration:8.2s;animation-delay:-7s"><use xlink:href="#p"/></g></g>
+<g transform="translate(1240,0)"><g class="f" style="animation-duration:7.2s;animation-delay:-1s"><use xlink:href="#p"/></g></g>
+<g transform="translate(640,0)"><g class="g" style="animation-duration:8.8s;animation-delay:-5.5s"><use xlink:href="#p"/></g></g>
+<g transform="translate(360,0)"><g class="g" style="animation-duration:7.8s;animation-delay:-2s"><use xlink:href="#p"/></g></g>
+<g transform="translate(960,0)"><g class="f" style="animation-duration:6.2s;animation-delay:-3.8s"><use xlink:href="#p"/></g></g>
+<g transform="translate(1320,0)"><g class="f" style="animation-duration:9.2s;animation-delay:-6.5s"><use xlink:href="#p"/></g></g>
+<g transform="translate(240,0)"><g class="f" style="animation-duration:8.4s;animation-delay:-4s"><use xlink:href="#p"/></g></g>
+<g transform="translate(800,0)"><g class="f" style="animation-duration:7.6s;animation-delay:-0.5s"><use xlink:href="#p"/></g></g>
+<g transform="translate(1180,0)"><g class="g" style="animation-duration:6.9s;animation-delay:-5.2s"><use xlink:href="#p"/></g></g>
 </svg>

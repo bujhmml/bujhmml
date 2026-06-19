@@ -2,23 +2,19 @@
 
 <img src="assets/hero.svg" width="100%" alt="bujhmml" />
 
-<br/><br/>
-
-<img src="https://skillicons.dev/icons?i=py,fastapi,django,ts,nodejs,react,nextjs,postgres,redis,rabbitmq,docker,kubernetes,nginx,linux,graphql,githubactions&theme=dark&perline=8" alt="stack" />
-
 </div>
 
 <img src="assets/divider.svg" width="100%" alt="" />
 
 <div align="center">
 
-<img height="175" src="https://github-readme-stats.vercel.app/api?username=bujhmml&show_icons=true&include_all_commits=true&count_private=true&hide_border=false&border_color=2a2118&bg_color=00000000&title_color=e3b341&icon_color=e23b32&text_color=c9c2b4&rank_icon=github" alt="stats" />
+<img height="200" src="https://github-readme-stats.vercel.app/api?username=bujhmml&show_icons=true&include_all_commits=true&count_private=true&hide_border=false&border_color=2a2118&bg_color=00000000&title_color=e3b341&icon_color=e23b32&text_color=c9c2b4&rank_icon=github" alt="stats" />
 &nbsp;&nbsp;
-<img height="175" src="https://streak-stats.demolab.com?user=bujhmml&theme=dark&hide_border=false&border=2a2118&background=00000000&ring=e3b341&fire=e23b32&currStreakLabel=e3b341&sideLabels=c9c2b4&dates=8a7f6b&currStreakNum=f3ead7&sideNums=f3ead7&stroke=2a2118" alt="streak" />
+<img height="200" src="https://streak-stats.demolab.com?user=bujhmml&theme=dark&hide_border=false&border=2a2118&background=00000000&ring=e3b341&fire=e23b32&currStreakLabel=e3b341&sideLabels=c9c2b4&dates=8a7f6b&currStreakNum=f3ead7&sideNums=f3ead7&stroke=2a2118" alt="streak" />
 
-<br/>
+<br/><br/>
 
-<img height="175" src="https://github-readme-stats.vercel.app/api/top-langs/?username=bujhmml&layout=compact&langs_count=10&hide_border=false&border_color=2a2118&bg_color=00000000&title_color=e3b341&text_color=c9c2b4" alt="top languages" />
+<img width="490" src="assets/langs.svg" alt="most used languages" />
 
 </div>
 
@@ -38,12 +34,10 @@
 
 <div align="center">
 
-<a href="https://github.com/bujhmml"><img src="https://cdn.simpleicons.org/github/e3b341" height="26" alt="github" /></a>
-&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="https://t.me/bujhmml"><img src="https://cdn.simpleicons.org/telegram/e3b341" height="26" alt="telegram" /></a>
-&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="mailto:igorbelevskiy12@gmail.com"><img src="https://cdn.simpleicons.org/gmail/e3b341" height="26" alt="email" /></a>
-&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="https://bujhmml.fun"><img src="https://cdn.simpleicons.org/aboutdotme/e3b341" height="26" alt="site" /></a>
+<a href="https://t.me/bujhmml"><img src="https://img.shields.io/badge/Telegram-e3b341?style=for-the-badge&logo=telegram&logoColor=1a1410" height="34" alt="Telegram" /></a>
+&nbsp;&nbsp;
+<a href="mailto:igorbelevskiy12@gmail.com"><img src="https://img.shields.io/badge/Email-e3b341?style=for-the-badge&logo=gmail&logoColor=1a1410" height="34" alt="Email" /></a>
+&nbsp;&nbsp;
+<a href="https://bujhmml.fun"><img src="https://img.shields.io/badge/bujhmml.fun-e3b341?style=for-the-badge&logo=safari&logoColor=1a1410" height="34" alt="Website" /></a>
 
 </div>
