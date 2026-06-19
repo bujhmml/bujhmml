@@ -30,7 +30,7 @@
 
 <br/><br/>
 
-<img src="assets/github-snake.svg" width="100%" alt="contribution snake" />
+<img src="https://raw.githubusercontent.com/bujhmml/bujhmml/output/github-snake.svg" width="100%" alt="contribution snake" />
 
 </div>
 
